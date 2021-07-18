@@ -1,6 +1,6 @@
 import sys
 
-def strtoequ(equation):
+def strtoequ(equation): # 입력된 식을 숫자와 기호로 분리해 배열에 추가하는 함수
     num, splits = 0, []
     for i in range(len(equation)):
         if(equation[i] == '+' or equation[i] == '-'):
@@ -28,7 +28,7 @@ def brace(equation):
     elif(oper2 == "+"):
         r[len(r) - 1] += equation[l - 1]
     else:
-        if(l > 1):
+        if(l > 1): # 식에 기호가 없는 경우를 위한 조건문
             oper1 = equation[1]
             if(oper1 == "-"):
                 r.append(oper1)
