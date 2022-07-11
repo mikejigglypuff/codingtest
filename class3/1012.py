@@ -1,7 +1,4 @@
-from re import X
-
 import sys
-import random
 
 cabbages = []
 loc = []
@@ -62,20 +59,3 @@ for i in range(t):
     loc.append([x, y])
     cabbages[x][y] = 1
   print(get_min_worm(m, n))
-
-'''
-for x in range(10000):
-  m, n= random.randrange(1, 51), random.randrange(1, 51)
-  k = random.randrange(1, m * n + 1)
-  cabbages = [[0 for x in range(n)] for y in range(m)]
-  loc = []
-  for i in range(m):
-    for j in range(n):
-      if(random.random() >= 0.5):
-        cabbages[i][j] = 1
-        loc.append([i, j])
-  print(m, n, k)
-  print(cabbages)
-  print(loc)
-  print(get_min_worm(m, n))
-'''
