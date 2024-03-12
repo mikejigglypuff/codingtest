@@ -1,6 +1,5 @@
 package class4;
 
-/*
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+        
         StringTokenizer nm = new StringTokenizer(br.readLine());
         n = Integer.parseInt(nm.nextToken());
         m = Integer.parseInt(nm.nextToken());
@@ -70,4 +69,3 @@ public class Main {
         }
     }
 }
-*/
