@@ -1,5 +1,4 @@
-package class4;
-
+/*
 import java.io.*;
 import java.util.*;
 
@@ -13,8 +12,8 @@ public class Main {
         n = Integer.parseInt(nmx.nextToken());
         int m = Integer.parseInt(nmx.nextToken());
         int x = Integer.parseInt(nmx.nextToken()) - 1;
-        List<List<Node>> graph = new ArrayList<>();
-        List<List<Node>> reverse = new ArrayList<>();
+        List<List<class4.Main.Node>> graph = new ArrayList<>();
+        List<List<class4.Main.Node>> reverse = new ArrayList<>();
         int answer = 0;
 
         dis = new int[2][n];
@@ -33,8 +32,8 @@ public class Main {
             int dest = Integer.parseInt(st.nextToken()) - 1;
             int dist = Integer.parseInt(st.nextToken());
 
-            graph.get(start).add(new Node(dest, dist));
-            reverse.get(dest).add(new Node(start, dist));
+            graph.get(start).add(new class4.Main.Node(dest, dist));
+            reverse.get(dest).add(new class4.Main.Node(start, dist));
         }
 
         dijkstra(x, 0, graph);
@@ -48,16 +47,16 @@ public class Main {
         System.out.println(answer);
     }
 
-    public static void dijkstra(int start, int index, List<List<Node>> graph) {
-        PriorityQueue<Node> pq = new PriorityQueue<>();
-        pq.add(new Node(start, 0));
+    public static void dijkstra(int start, int index, List<List<class4.Main.Node>> graph) {
+        PriorityQueue<class4.Main.Node> pq = new PriorityQueue<>();
+        pq.add(new class4.Main.Node(start, 0));
         dis[index][start] = 0;
 
         while (!pq.isEmpty()) {
-            Node cur = pq.poll();
+            class4.Main.Node cur = pq.poll();
             if(dis[index][cur.num] < cur.dis) continue;
 
-            for(Node next : graph.get(cur.num)) {
+            for(class4.Main.Node next : graph.get(cur.num)) {
                 int cost = dis[index][cur.num] + next.dis;
                 if(cost < dis[index][next.num]) {
                     dis[index][next.num] = cost;
@@ -68,7 +67,7 @@ public class Main {
         }
     }
 
-    public static class Node implements Comparable<Node> {
+    public static class Node implements Comparable<class4.Main.Node> {
         int num;
         int dis;
 
@@ -78,10 +77,11 @@ public class Main {
         }
 
         @Override
-        public int compareTo(Node other) {
+        public int compareTo(class4.Main.Node other) {
             if(dis < other.dis) return -1;
             else if(dis == other.dis) return 0;
             return 1;
         }
     }
 }
+ */
