@@ -1,5 +1,4 @@
-package class4;
-
+/*
 import java.io.*;
 import java.util.*;
 
@@ -8,7 +7,7 @@ public class Main {
     static List<List<Node>> dis = new ArrayList<>();
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        
+
         //v, e 설정
         StringTokenizer ve = new StringTokenizer(br.readLine());
         int v = Integer.parseInt(ve.nextToken());
@@ -21,7 +20,7 @@ public class Main {
 
         //시작점 설정
         int start = Integer.parseInt(br.readLine());
-        
+
         //간선 초기화
         for(int i = 0; i < e; i++) {
             StringTokenizer edge = new StringTokenizer(br.readLine());
@@ -30,21 +29,21 @@ public class Main {
             int d = Integer.parseInt(edge.nextToken());
             dis.get(e1).add(new Node(e2, d));
         }
-        
+
         int[] dij = Arrays.copyOfRange(dijkstra(start, v), 1, v + 1);
-        
+
         System.out.println(Stringify(dij));
     }
 
     public static int[] dijkstra(int start, int n) {
         PriorityQueue<Node> pq = new PriorityQueue<>();
         boolean[] isVisited = new boolean[n + 1];
-        
+
         int[] d = new int[n + 1];
         for(int i = 1; i <= n; i++) {
             d[i] = maxVal;
         }
-        
+
         pq.add(new Node(start, 0));
         d[start] = 0;
 
@@ -67,7 +66,7 @@ public class Main {
 
         return d;
     }
-    
+
     public static String Stringify(int[] arr) {
         StringBuilder sb = new StringBuilder();
 
@@ -76,9 +75,9 @@ public class Main {
             if(i != maxVal) adds = i + "\n";
             sb.append(adds);
         }
-        
+
         sb.deleteCharAt(sb.length() - 1);
-        
+
         return sb.toString();
     }
 
@@ -99,3 +98,4 @@ public class Main {
         }
     }
 }
+ */
