@@ -1,5 +1,4 @@
-package class4;
-
+/*
 import java.io.*;
 import java.util.*;
 
@@ -8,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String infix = br.readLine();
-        
+
         priority.put('(', 0);
         priority.put(')', 0);
         priority.put('+', 1);
@@ -46,3 +45,4 @@ public class Main {
         System.out.println(sb.toString());
     }
 }
+ */
