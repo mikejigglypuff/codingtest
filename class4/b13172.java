@@ -1,5 +1,4 @@
-package class4;
-
+/*
 import java.io.*;
 import java.util.*;
 
@@ -34,3 +33,4 @@ public class Main {
         return ((v * v) % MODULE) * b % MODULE;
     }
 }
+ */
