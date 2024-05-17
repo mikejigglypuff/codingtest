@@ -1,5 +1,4 @@
-package class4;
-
+/*
 import java.io.*;
 import java.util.*;
 
@@ -7,13 +6,13 @@ public class Main {
     static char[][] cheese;
     static int n, m, minAir = 2, time = 0;
     static int[][] d = {
-            {-1, 0}, {1, 0}, {0, -1}, {0, 1}      
+            {-1, 0}, {1, 0}, {0, -1}, {0, 1}
     };
     static int[][] melts;
 
     public static void main(String[] args) throws IOException {
         init();
-        
+
         while (existsCheese()) {
             bfs();
             removeCheese();
@@ -22,7 +21,7 @@ public class Main {
 
         System.out.println(time);
     }
-    
+
     private static void init() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -37,7 +36,7 @@ public class Main {
             cheese[i] = br.readLine().replace(" ", "").toCharArray();
         }
     }
-    
+
     private static void bfs() {
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{0, 0});
@@ -45,7 +44,7 @@ public class Main {
         while (!queue.isEmpty()) {
             int[] cur = queue.poll();
             ++melts[cur[0]][cur[1]];
-                
+
             for(int[] dir : d) {
                 int curX = cur[1] + dir[1], curY = cur[0] + dir[0];
                 if(curX >= 0 && curX < m && curY >= 0 && curY < n) {
@@ -119,6 +118,7 @@ public class Main {
         };
          */
 
+        /*
         n = 11;
         m = 15;
         cheese = new char[][]{
@@ -133,9 +133,10 @@ public class Main {
                 {'0', '0', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '1', '0'},
                 {'0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '0', '0', '0', '1', '0'},
                 {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'}
-        };
+         };
 
 
-        melts = new int[n][m];
+         melts = new int[n][m];
     }
 }
+ */
