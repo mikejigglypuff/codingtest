@@ -1,18 +1,19 @@
 package class4;
 
+/*
 import java.io.*;
 import java.util.*;
 
 public class Main {
     static int n, max = 1000;
     static long b;
-    static Matrix[] matrix;
+    static class4.Main.Matrix[] matrix;
 
     public static void main(String[] args) throws IOException {
         init();
         calc();
     }
-    
+
     private static void init() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -22,9 +23,9 @@ public class Main {
         b = Long.parseLong(nm.nextToken());
         int twoLen = (int)(Math.log(b) / Math.log(2));
 
-        matrix = new Matrix[twoLen + 1];
+        matrix = new class4.Main.Matrix[twoLen + 1];
         for(int i = 0; i <= twoLen; i++) {
-            matrix[i] = new Matrix(n);
+            matrix[i] = new class4.Main.Matrix(n);
         }
 
         for(int i = 0; i < n; i++) {
@@ -42,7 +43,7 @@ public class Main {
     }
 
     private static void calc() {
-        Matrix result = matrix[0];
+        class4.Main.Matrix result = matrix[0];
         int index = 0;
         b--;
         while (b > 0) {
@@ -64,22 +65,22 @@ public class Main {
         System.out.println(result.toString());
     }
 
-    private static Matrix mulMatrix(Matrix a, Matrix b) {
+    private static class4.Main.Matrix mulMatrix(class4.Main.Matrix a, class4.Main.Matrix b) {
         int len = a.getLen();
-        Matrix c = new Matrix(len);
-        
+        class4.Main.Matrix c = new class4.Main.Matrix(len);
+
         for(int i = 0; i < len; i++) {
             for(int j = 0; j < len; j++) {
                 int sum = 0;
-                
+
                 for(int k = 0; k < len; k++) {
                     sum += (a.getMatrix(i, k) * b.getMatrix(k, j)) % max;
                 }
-                
+
                 c.setMatrix(i, j, sum % max);
             }
         }
-        
+
         return c;
     }
 
@@ -97,7 +98,7 @@ public class Main {
         public int getMatrix(int y, int x) {
             return matrix[y][x];
         }
-        
+
         public int getLen() { return matrix.length; }
 
         public String toString() {
@@ -116,3 +117,4 @@ public class Main {
         }
     }
 }
+ */
